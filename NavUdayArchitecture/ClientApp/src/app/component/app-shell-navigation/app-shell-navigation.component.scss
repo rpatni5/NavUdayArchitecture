@@ -1,0 +1,42 @@
+.mdop-shell-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .mdop-nav,
+  .mdop-sub-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #f9f7f6;
+    width: 100%;
+    height: 40px;
+    .menu {
+      display: flex;
+      width: 1080px;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      .item {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        margin-right: 40px;
+        cursor: pointer;
+        a {
+          color: #3b3331;
+          text-decoration: none;
+        }
+      }
+      .item.active {
+        font-weight: 700;
+        border-bottom: 2px solid #ffcd41;
+        a {
+          color: #141414;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

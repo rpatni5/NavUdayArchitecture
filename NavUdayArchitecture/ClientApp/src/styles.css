@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.bg-red{
+  background-color: red;
+}
+.bold-white{
+  color: white !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+.font-white{
+  color: white !important;
+  font-size: 16px !important;
+}
