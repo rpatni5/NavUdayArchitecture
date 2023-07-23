@@ -6,11 +6,20 @@ using NavUdayArchitecture.Database.Models;
 using NavUdayArchitecture.Helpers;
 using NavUdayArchitecture.Services.Interface;
 using NavUdayArchitecture.Services.Services;
+using Serilog;
 using System.Configuration;
 using System.Text.Json.Serialization;
 using BCryptNet = BCrypt.Net.BCrypt;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add serilog logging
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
