@@ -10,14 +10,21 @@ import { CounterComponent } from './component/counter/counter.component';
 import { FetchDataComponent } from './component/fetch-data/fetch-data.component';
 import { LoginComponent } from './component/login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material';
+import {MatIconModule} from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
 import { HeadersInterceptor } from './headers.interceptor';
 import { AuthService } from './services/auth-service';
 import { AppGuard } from './app-guard.guard';
+import { RegisterComponent } from './component/register/register.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDialogModule} from '@angular/material/dialog'
+import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
+import { TimeOutDialogueComponent } from './Dialogue/time-out-dialogue.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +33,8 @@ import { AppGuard } from './app-guard.guard';
     CounterComponent,
     FetchDataComponent,
     LoginComponent,
+    RegisterComponent,
+    TimeOutDialogueComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -37,6 +46,10 @@ import { AppGuard } from './app-guard.guard';
     ReactiveFormsModule,
     MatButtonModule,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatDialogModule,
+    NgIdleKeepaliveModule.forRoot(),
     RouterModule.forRoot([
       {
         path: '',
@@ -44,6 +57,7 @@ import { AppGuard } from './app-guard.guard';
         pathMatch: 'full'
       },
       { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
       {
         path: 'user-dashboard',
         loadChildren: () =>

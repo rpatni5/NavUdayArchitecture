@@ -1,0 +1,56 @@
+
+       <div class="main-div">
+       <mat-card style="margin: 2em">
+        <mat-toolbar class="login-toolbar" color="warn"><span class="title-center">REGISTER</span></mat-toolbar>
+            <div>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <mat-form-field >
+                                <input type="text" matInput placeholder="firstName" formControlName="firstName" />
+                            </mat-form-field>
+
+                       
+                            <mat-form-field>
+                                <input type="text" matInput placeholder="lastName" formControlName="lastName" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="form-group" fxLayout="row">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="email"  formControlName="email" />
+                            <mat-error>{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                       
+                    </div>
+                    <div class="form-row" fxLayout="row">
+                        <div class="form-group">
+                            <mat-form-field>
+                                <input type="text" matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" />
+                                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </mat-form-field>
+                           
+
+                        </div>
+                        <div class="form-group" fxLayout="row">
+                            <mat-form-field>
+                                <input type="text" matInput placeholder="Confirm Password"
+                                    formControlName="confirmPassword"  [type]="hideConfirm ? 'password' : 'text'"/>
+                                    <mat-error >{{passwordNotMatch()}}</mat-error>
+                                    <mat-icon matSuffix (click)="hideConfirm = !hideConfirm">{{hideConfirm ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </mat-form-field>
+                           
+                        
+                        </div>
+                    </div>
+
+                    <div >
+                        <button type="submit" mat-flat-button class="bg-red font-white margin_17">Register</button>
+                        <button class="margin_35"  mat-raised-button   (click)="reset()" >Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </mat-card>
+</div>

@@ -23,6 +23,13 @@ export class AuthService {
     return token != null && token != '';
   }
 
+  registerUser(registerModel: RegisterUser) {
+    return this.httpClient.post<any>(
+      this.applicationUrl + '/users/registerUser',
+      registerModel
+    );
+  }
+
   logout() {
     localStorage.setItem('access_token', '');
     this.router.navigateByUrl('login');
@@ -41,4 +48,11 @@ export interface AuthenticateResponse {
   username: string;
   token: string;
   role: string;
+}
+
+export interface RegisterUser {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
 }

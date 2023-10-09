@@ -1,3 +1,4 @@
+
 <mat-card style="margin: 2em">
   <mat-card-title>Login</mat-card-title>
   <mat-card-content>
@@ -28,9 +29,15 @@
         {{ errorMessage }}
       </p>
 
-      <div class="button">
-        <button type="submit" mat-flat-button class="bg-red font-white">Login</button>
+    
+      <div >
+        
+        <button type="submit" mat-flat-button class="bg-red font-white margin_10">Login</button>
+        <button class="margin_35"  mat-raised-button   (click)="form.reset()" >Reset</button>
       </div>
+     <br/>
+        <span class="margin_18"> not a member? <a routerLink ='/register'>Signup Now</a></span>
+     
     </form>
   </mat-card-content>
 </mat-card>

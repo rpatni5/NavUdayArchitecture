@@ -1,0 +1,10 @@
+<div mat-dialog-content>
+    <p>Session timeout warning</p>
+    
+        <p>Your session will expire in</p>
+      <mat-label>{{timeLeft}}</mat-label><p>seconds!</p>
+     
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="restartSession()">Restart</button>
+  </div>

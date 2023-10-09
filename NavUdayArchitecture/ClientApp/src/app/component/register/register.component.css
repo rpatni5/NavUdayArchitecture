@@ -1,0 +1,28 @@
+
+  :host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+  .margin_35{
+    margin-left: 35%;
+  }
+  .margin_17{
+    margin-left: 17%;
+  }
+  .title-center {
+    margin: 0 auto;
+  }
+  .registerHeader{
+  height:46px
+  }
+  .mat-card:not([class*="mat-elevation-z"]) {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 1), 0 1px 1px 0 rgba(0, 0, 0, 1),
+      0 1px 3px 0 rgba(0, 0, 0, 1);
+  }
+ 
