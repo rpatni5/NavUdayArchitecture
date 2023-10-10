@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  applicationUrl: 'http://localhost:44462',
+  applicationUrl: 'https://qardan-hasana.azurewebsites.net/',
 };
