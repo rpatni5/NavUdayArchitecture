@@ -73,10 +73,11 @@ export class AppComponent {
     dialogRef.afterClosed().subscribe((result: any) => {
 
       if (result == 'exit') {
-        this.router.navigateByUrl('login');
+        this.authToken = null;
+        this.router.navigate(['/']);
       }
       console.log('The dialog was closed');
-      this.reset();
+      // this.reset();
     });
   }
 }

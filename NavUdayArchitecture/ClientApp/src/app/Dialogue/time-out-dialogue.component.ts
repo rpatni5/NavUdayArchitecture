@@ -27,7 +27,8 @@ export class TimeOutDialogueComponent implements OnInit {
       }
       if (this.timeLeft == 0) {
         this.dialogRef.close('exit');
-        this.router.navigateByUrl('login');
+        this.router.navigate(['/']);
+        clearInterval(this.interval);
       }
     }, 1000)
 

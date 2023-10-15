@@ -22,26 +22,7 @@ export class IntakeFormComponent implements OnInit {
     IsNonPRofit: ['', Validators.required],
     IsbusinessDisRegarded : ['', Validators.required]
   });
-  relationshipForm : FormGroup = this._formBuilder.group({
-    ContactName: ['', Validators.required],
-    secondCtrl: ['', Validators.required],
-
-    ContactTitle: ['', Validators.required],
-
-    JobTitle: ['', Validators.required],
-    ContactPhone: ['', Validators.required],
-    ContactEmailAddress: ['', Validators.required],
-
-  });
-  transactionForm : FormGroup = this._formBuilder.group({
-    PaymentVia: ['', Validators.required],
-    ordersDestiny: ['', Validators.required],
-    VisaOrMartercard: ['', Validators.required],
-    DeliveryPath: ['', Validators.required],
-    StatementSentTo: ['', Validators.required],
-    CustomerServicePhone: ['', Validators.required],
-    RefundPolicy:  ['', Validators.required]
-  });
+  
   isLinear = false;
   constructor( private _formBuilder: FormBuilder) { }
 

@@ -17,6 +17,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatListModule} from '@angular/material/list';
+import { RelationshipFormComponent } from './intake-form/relationship-form/relationship-form.component';
+import { TransactionFormComponent } from './intake-form/transaction-form/transaction-form.component';
+import { UserInformationComponent } from './intake-form/user-information/user-information.component';
 
 const routes: Routes = [{ path: '', component: UserDashboardComponent },
                         { path: 'intake-form', component: IntakeFormComponent }];
@@ -26,7 +29,10 @@ const routes: Routes = [{ path: '', component: UserDashboardComponent },
     UserDashboardComponent,
     NavMenuComponent,
     AppShellNavigationComponent,
-    IntakeFormComponent
+    IntakeFormComponent,
+    RelationshipFormComponent,
+    TransactionFormComponent,
+    UserInformationComponent
   ],
   imports: [CommonModule, MatStepperModule, MatFormFieldModule, ReactiveFormsModule,MatInputModule, 
     MatNativeDateModule, MatRadioModule, MatCardModule,MatButtonModule,MatExpansionModule,

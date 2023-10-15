@@ -19,6 +19,9 @@ code {
 .bg-red{
   background-color: red;
 }
+mat-expansion-panel-header:hover {
+  background-color: rgb(255, 72, 0)!important;
+}
 .bold-white{
   color: white !important;
   font-size: 20px;
@@ -37,4 +40,62 @@ code {
 }
 .margin_10{
   margin-left: 10%;
+}
+.header {
+  color: red;
+}
+
+.header:after {
+  content: ' ';
+  display: block;
+  border: 2px solid black;
+}
+
+mat-form-field {
+  display: block !important;
+  /* You can use 'block' or 'flex' or any other display value that suits your layout */
+}
+
+mat-radio-button {
+  margin-right: 10px;
+  /* Add spacing between radio buttons */
+  /* Add any other styles you want */
+}
+
+.radioLabel {
+  font-size: 16px;
+  ;
+}
+
+mat-radio-group {
+  margin-left: 40px;
+  
+}
+
+.radioButtonFirst_leftMargin {
+  margin-left: 25px;
+}
+
+.radioButtonFirst_rightMargin {
+  margin-right: 25px;
+}
+
+.margin_top{
+  margin-top: 22px;
+}
+mat-card-actions{
+  float: right;
+  margin-top: -45px;
+}
+.mat-expansion-panel-header.mat-expanded {
+  height: 64px;
+  background-color: red !important
+  ;
+}
+.mat-expansion-panel-header-title {
+  color: #fff !important;
+  font-size: 20px;
+}
+.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
+  color: #fff !important;
 }

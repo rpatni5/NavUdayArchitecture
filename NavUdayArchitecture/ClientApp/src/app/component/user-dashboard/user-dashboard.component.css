@@ -1,0 +1,74 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
+  
+  .input-spacer {
+    padding-right: 10px;
+  }
+  
+  :host ::ng-deep .mat-step-icon-selected {
+    background-color: red !important;
+  }
+  
+  
+  
+  .header {
+    color: red;
+  }
+  
+  .header:after {
+    content: ' ';
+    display: block;
+    border: 2px solid black;
+  }
+  
+  mat-form-field {
+    display: block !important;
+    /* You can use 'block' or 'flex' or any other display value that suits your layout */
+  }
+  
+  mat-radio-button {
+    margin-right: 10px;
+    /* Add spacing between radio buttons */
+    /* Add any other styles you want */
+  }
+  
+  .radioLabel {
+    font-size: 16px;
+    ;
+  }
+  
+  mat-radio-group {
+    margin-left: 40px;
+    
+  }
+  
+  .radioButtonFirst_leftMargin {
+    margin-left: 25px;
+  }
+  
+  .radioButtonFirst_rightMargin {
+    margin-right: 25px;
+  }
+  
+  .margin_top{
+    margin-top: 22px;
+  }
+  mat-card-actions{
+    float: right;
+    margin-top: -45px;
+  }
+  
+  .form-card {
+    max-width: 1250px;
+    margin: 2em;
+  }
+  
+  .mat-stepper{
+    max-width: 1200px;
+    margin-left: 120px;
+  }
