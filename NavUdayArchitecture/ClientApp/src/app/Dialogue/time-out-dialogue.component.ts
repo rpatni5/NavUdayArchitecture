@@ -9,27 +9,27 @@ import { interval } from 'rxjs';
   styleUrls: ['./time-out-dialogue.component.css']
 })
 export class TimeOutDialogueComponent implements OnInit {
-  
-  message: string= "";
- interval
- timeLeft: number = 0;
+
+  message: string = "";
+  interval
+  timeLeft: number = 0;
   ngOnInit(): void {
   }
   constructor(
-    public dialogRef: MatDialogRef<TimeOutDialogueComponent>,public router: Router,
+    public dialogRef: MatDialogRef<TimeOutDialogueComponent>, public router: Router,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
-    debugger;
-this.timeLeft = data.message;
-this.interval = setInterval(() => {
-  if(this.timeLeft > 0) {
-    this.timeLeft--;
-    
-  }
-  if(this.timeLeft ==0){
-    this.dialogRef.close('exit');
-  }
-},1000)
+    this.timeLeft = data.message;
+    this.interval = setInterval(() => {
+      if (this.timeLeft > 0) {
+        this.timeLeft--;
+
+      }
+      if (this.timeLeft == 0) {
+        this.dialogRef.close('exit');
+        this.router.navigateByUrl('login');
+      }
+    }, 1000)
 
   }
 

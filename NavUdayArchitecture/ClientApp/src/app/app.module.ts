@@ -25,6 +25,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog'
 import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
 import { TimeOutDialogueComponent } from './Dialogue/time-out-dialogue.component';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 @NgModule({
   declarations: [
