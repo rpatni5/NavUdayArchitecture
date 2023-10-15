@@ -15,17 +15,19 @@ namespace NavUdayArchitecture.Controllers
     {
         private IUserService _userService;
         private IJwtUtils _jwtUtils;
-
-        public UsersController(IUserService userService, IJwtUtils jwtUtils)
+        private readonly ILogger<UsersController> _logger;
+        public UsersController(IUserService userService, IJwtUtils jwtUtils, ILogger<UsersController> logger)
         {
             _userService = userService;
             _jwtUtils = jwtUtils;
+            _logger = logger;
         }
 
         [AllowAnonymous]
         [HttpPost("authenticate")]
         public IActionResult Authenticate(AuthenticateRequest model)
         {
+            _logger.LogInformation("UsersController Authenticate Started.");
             try
             {
                 var user = _userService.Authenticate(model);
@@ -33,6 +35,7 @@ namespace NavUdayArchitecture.Controllers
                 var jwtToken = _jwtUtils.GenerateJwtToken(user);
 
                 var response = new AuthenticateResponse(user, jwtToken);
+                _logger.LogInformation("UsersController Authenticate Ended.");
                 return Ok(response);
 
             }
