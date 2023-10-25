@@ -1,6 +1,9 @@
 <app-nav-menu class="sticky"></app-nav-menu>
 <app-shell-navigation></app-shell-navigation>
-<div *ngIf="globalActiveMenuItem">
+<div *ngIf="globalActiveMenuItem" class="container"
+fxLayout
+fxLayoutAlign="center"
+fxLayoutGap="10px">
   <div *ngIf="globalActiveMenuItem.name == 'Dashboard'">
    
       <!-- <button
@@ -9,8 +12,8 @@
         mat-flat-button
         class="bg-red font-white"
       > -->
-      <mat-card class="form-card mLeft63">
-      <mat-icon class="mLeft1187" matTooltip="add new application"  (click)="fillNewApplicationForm()" >add_circle</mat-icon>
+      <mat-card class="form-card ">
+      <mat-icon  matTooltip="add new application"  (click)="fillNewApplicationForm()" >add_circle</mat-icon>
       <!-- </button> -->
    <app-application-dashboard></app-application-dashboard>
   </mat-card>
