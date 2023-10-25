@@ -8,13 +8,7 @@
       </button>
       <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" [ngClass]="{ show: isExpanded }">
         <ul class="navbar-nav flex-grow">
-          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
-           <a class="nav-link text-dark font-white" [routerLink]="['/']">Home</a>
           
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark font-white" [routerLink]="['/counter']">Counter</a>
-          </li>
           <li class="nav-item " [routerLinkActive]="['link-active']">
             <a class="nav-link text-dark font-white" href="javascript:void(0)" (click)="onLogoutClick()">Log out</a>
           </li>
