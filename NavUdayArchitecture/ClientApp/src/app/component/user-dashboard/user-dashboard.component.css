@@ -72,3 +72,17 @@
     max-width: 1200px;
     margin-left: 120px;
   }
+  .mLeft63{
+    margin-left: 120px !important;
+  }
+  .mLeft1187{
+    margin-left: 1187px !important;
+
+  }
+  .mat-card {
+    color:red;
+  }
+  .sticky {
+    position: sticky;
+  }
+  

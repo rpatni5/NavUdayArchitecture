@@ -1,18 +1,20 @@
-<app-nav-menu></app-nav-menu>
+<app-nav-menu class="sticky"></app-nav-menu>
 <app-shell-navigation></app-shell-navigation>
 <div *ngIf="globalActiveMenuItem">
   <div *ngIf="globalActiveMenuItem.name == 'Dashboard'">
-    Dashboard item loaded
-    <div class="button">
-      <button
+   
+      <!-- <button
         (click)="fillNewApplicationForm()"
         type="button"
         mat-flat-button
         class="bg-red font-white"
-      >
-        Fill new application form
-      </button>
-    </div>
+      > -->
+      <mat-card class="form-card mLeft63">
+      <mat-icon class="mLeft1187" matTooltip="add new application"  (click)="fillNewApplicationForm()" >add_circle</mat-icon>
+      <!-- </button> -->
+   <app-application-dashboard></app-application-dashboard>
+  </mat-card>
+  
   </div>
   <div *ngIf="globalActiveMenuItem.name == 'Application'">
   <app-intake-form></app-intake-form>

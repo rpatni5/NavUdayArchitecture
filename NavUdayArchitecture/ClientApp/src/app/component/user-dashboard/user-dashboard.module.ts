@@ -20,9 +20,15 @@ import {MatListModule} from '@angular/material/list';
 import { RelationshipFormComponent } from './intake-form/relationship-form/relationship-form.component';
 import { TransactionFormComponent } from './intake-form/transaction-form/transaction-form.component';
 import { UserInformationComponent } from './intake-form/user-information/user-information.component';
+import { ApplicationDashboardComponent } from './application-dashboard/application-dashboard.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const routes: Routes = [{ path: '', component: UserDashboardComponent },
-                        { path: 'intake-form', component: IntakeFormComponent }];
+                        { path: 'intake-form', component: IntakeFormComponent },
+                        { path: 'dashboard', component: ApplicationDashboardComponent }];
 
 @NgModule({
   declarations: [
@@ -32,11 +38,12 @@ const routes: Routes = [{ path: '', component: UserDashboardComponent },
     IntakeFormComponent,
     RelationshipFormComponent,
     TransactionFormComponent,
-    UserInformationComponent
+    UserInformationComponent,
+    ApplicationDashboardComponent
   ],
   imports: [CommonModule, MatStepperModule, MatFormFieldModule, ReactiveFormsModule,MatInputModule, 
-    MatNativeDateModule, MatRadioModule, MatCardModule,MatButtonModule,MatExpansionModule,
-    MatDatepickerModule, MatListModule, RouterModule.forChild(routes)],
+    MatNativeDateModule, MatRadioModule, MatCardModule,MatButtonModule,MatExpansionModule, MatTableModule, MatPaginatorModule,
+    MatDatepickerModule, MatListModule, MatIconModule, MatTooltipModule, RouterModule.forChild(routes)],
   providers: [FrameworkService],
 })
 export class UserDashboardModule { }

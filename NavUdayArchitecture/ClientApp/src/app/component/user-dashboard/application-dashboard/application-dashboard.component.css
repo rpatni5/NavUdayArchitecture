@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+  }
+
+  .mat-card {
+    padding: 54px !important;
+  }
+  .mat-header-cell {
+    color: #fff;
+}
